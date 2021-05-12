@@ -17,6 +17,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: docker/setup-buildx-action@v1
+          context: setup-buildx-action@v1
           push: true
           tags: user/app:latest
