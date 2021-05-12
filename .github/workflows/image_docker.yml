@@ -17,14 +17,14 @@ jobs:
     - name: Build the Docker image
       run: docker build . -t simpleweb
 
-    - name: Login to DockerHub
     - uses: actions/checkout@v2
+    - name: Login to DockerHub
       with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           
+    - uses: actions/checkout@v2
     - name: Build and push
-    - uses: docker/build-push-action@v2
       with:
           context: actions/checkout@v2
           push: true
