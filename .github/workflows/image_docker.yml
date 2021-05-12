@@ -22,7 +22,7 @@ jobs:
       -
         name: Build and push
         id: docker/docker_build
-        uses: build-push-action@v2
+        uses: docker/build-push-action@v2
         with:
           push: true
           tags: user/app:latest
